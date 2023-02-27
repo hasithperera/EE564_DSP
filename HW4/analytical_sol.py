@@ -19,10 +19,10 @@ q = 1
 
 x_hat_data = []
 x_x_hat_data = []
-rms_bits = np.arange(1,6,.25)
+rms_bits = np.arange(.25,6.25,.25)
 for k in rms_bits:
     
-    q = 1/(2**(k-1))
+    q = 1/(2**(k))
     
     x_x_hat = .5;
     x_hat = (N-.5) **2
@@ -34,9 +34,16 @@ for k in rms_bits:
     
 x_d = np.array(x_hat_data)
 xx_d = np.array(x_x_hat_data)
-plt.plot(rms_bits,x_d/xx_d)
-    # print(x_hat)
 
+cal = x_d/xx_d
+
+plt.plot(rms_bits,cal)
+
+i = np.argmin(cal)
+plt.plot(rms_bits[i],cal[i],'o')
+# plt.plot()
+    # print(x_hat)
+plt
     
 
 
