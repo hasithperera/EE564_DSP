@@ -24,4 +24,4 @@
 - Use the provided files and run the basic simulation
 	- Build the logic looking at the impulse response.
 
-- file: [HW4.slx](<file name here>)
+- file: [final simulink file](HW4_direct.slx.r2020b)
