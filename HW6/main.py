@@ -18,11 +18,11 @@ def DFT(x,k):
 if __name__=='__main__':
     
    
-    t = np.linspace(0,5,2**8)
+    t = np.linspace(0,5,2**4)
     dt = t[1]-t[0]
     df = 1 / dt
     f = 2
-    y = np.sin(2*np.pi*t*f)
+    y = 255*(.5*np.sin(2*np.pi*t*f)+.5)
     
     fft = []
     
@@ -37,3 +37,4 @@ if __name__=='__main__':
     
     plt.legend(['my DFT','np.fft.fft'])
     
+#    print(fft)
