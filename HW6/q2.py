@@ -23,8 +23,8 @@ def decimate_fft(x):
     if n == 1:
         return x
     else:
-        xe = decimate_in_frequency_fft(x[::2])
-        xo = decimate_in_frequency_fft(x[1::2])
+        xe = decimate_fft(x[::2])
+        xo = decimate_fft(x[1::2])
         w = np.exp(-2j * np.pi / n)
         for k in range(n // 2):
             xe[k], xo[k] = butterfly([xe[k], xo[k]], w ** k)

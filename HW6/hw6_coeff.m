@@ -14,3 +14,5 @@ plot(abs(y_fft),'o')
 
 w_r = real(w)
 w_c = imag(w)
+
+%%
